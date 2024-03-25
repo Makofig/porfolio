@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        html{
+            font-family: Menlo, Monaco, Lucida Console, 'Courier New', Courier, monospace;
+            background: #fff;
+            letter-spacing: -0.025rem;
+        }
+        body,
+        figure{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        *, *::before, *::after{
+            box-sizing: border-box;
+        }
+        @media (prefers-color-scheme: dark){
+            html{
+                background: #000;
+                color: #fff;
+            }
+        }
+        h1, h2, h3, h4{
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        p{
+            color: #777;
+            font-size: .8rem;
+            line-height: 1.5;
+            margin: 0;
+            text-wrap: pretty;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        /*function fetchJSONData() {
+            fetch("./schema.json")
+                .then((res) => {
+                    if (!res.ok) {
+                        throw new Error
+                            (`HTTP error! Status: ${res.status}`);
+                    }
+                    return res.json();
+                })
+                .then((data) => 
+                      console.log(data))
+                .catch((error) => 
+                       console.error("Unable to fetch data:", error));
+        }
+       fetchJSONData(); */
+       fetch('./schema.json')
+            .then(resp => resp.json())
+            .then((cv) => { 
+                const {name, label, location, email} = cv.basics;
+                const {city, region } = location; 
+                document.getElementById('name').textContent = name;
+                document.getElementById('label').textContent = label;
+                document.getElementById('location').textContent =  city + ', ' + region;
+                document.getElementById('email').textContent = email;
+                document.getElementById('email').href = `mailto:${email}`;  
+            })
+            .catch(err => console.error('Error fetching JSON:', err));          
+    </script>
+</head>
+<body>
+    <main>
+        <!-- Hero -->
+        <section class="Hero" >
+            <div class="container">
+                <div class="info">
+                    <h1 id="name"></h1>
+                    <h2 id="label"></h2>
+                    <span id="location"></span>
+                    <footer>
+                        <a  
+                            id="email"
+                            title="Enviar un correo electrónico"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                        </a>
+                    </footer>
+                </div>
+            </div>
+        </section>
+        <!-- About -->
+        <section class="About">
+            <h1>About</h1>
+        </section>
+        <!-- Experience -->
+        <section class="Experience">
+            <h1>Experience</h1>
+        </section>
+        <!-- Education -->
+        <section class="Education">
+            <h1>Education</h1>
+        </section>
+        <!-- Projects -->
+        <section class="Projects">
+            <h1>Projects</h1>
+        </section>
+        <!-- Skills -->
+        <section class="Skills">
+            <h1>Skills</h1>
+        </section>
+    </main>
+</body>
+</html>
