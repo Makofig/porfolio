@@ -1,24 +1,31 @@
 {
     "basics": {
       "name": "Marcos Javier, Aquino",
-      "label": "Programador",
-      "image": "",
+      "label": "Programador Node.js, con 2 años de experiencia.",
+      "image": "./img/abatar.jpg",
       "email": "Mark1089@outlook.com.ar",
       "phone": "",
       "url": "",
-      "summary": "A summary of John Doe…",
+      "summary": "Cuento con 2 años de experiencia como desarrollador Web. Actualmente estoy trabajando en proyectos personales. He trabajando en diferentes entornos: desde creación de una App-Web desde cero, para gestión de clientes hasta desarrollar politicas de redes en tegnologias Mikrotik.",
       "location": {
         "address": "2712 Broadway St",
-        "postalCode": "CA 94115",
-        "city": "Resistencia",
-        "countryCode": "US",
-        "region": "Chaco Argentina"
+        "postalCode": "3500",
+        "city": "Resistencia - Chaco",
+        "countryCode": "AR",
+        "region": "Argentina"
       },
-      "profiles": [{
-        "network": "Twitter",
-        "username": "john",
-        "url": "https://twitter.com/john"
-      }]
+      "profiles": [
+        {
+        "network": "GitHub",
+        "username": "Makofig",
+        "url": "https://github.com/Makofig"
+        }, 
+        {
+        "network": "Linkedin",
+        "username": "Marcos",
+        "url": "https://www.linkedin.com/in/marcos-a-2a3087188/"
+        }
+    ]
     },
     "work": [{
       "name": "Company",
