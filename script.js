@@ -1,6 +1,28 @@
 fetch('./schema.json')
             .then(resp => resp.json())
             .then((cv) => { 
+                const svgIcons = [
+                    "css.svg",
+                    "flutter.svg",
+                    "git.svg",
+                    "github.svg",
+                    "html.svg",
+                    "javaScript.svg",
+                    "kotlin.svg",
+                    "linkedin.svg",
+                    "mail.svg",
+                    "next.svg",
+                    "node.svg",
+                    "phone.svg",
+                    "react.svg",
+                    "sql.svg",
+                    "swift.svg",
+                    "swiftui.svg",
+                    "tailwind.svg",
+                    "type.svg",
+                    "wordMap.svg",
+                    "x.svg",
+                ]; 
                 const {name, label, location, email, image, profiles, summary, phone} = cv.basics;
                 const {city, region } = location; 
                 const {network, url} = profiles; 
@@ -12,7 +34,7 @@ fetch('./schema.json')
                 document.getElementById('name').textContent = name;
                 document.getElementById('label').textContent = label;
                 document.getElementById('location').textContent =  city + ', ' + region;
-                document.getElementById('email').textContent = "Outloook";
+                //document.getElementById('email').textContent = "Outloook";
                 document.getElementById('email').href = `mailto:${email}`; 
                 document.getElementById('email').title = `Enviar un correo electronico ${name}`; 
                 document.getElementById('image').src = image; 
@@ -32,8 +54,19 @@ fetch('./schema.json')
                     const iconos = document.createElement('a');
                     iconos.href = element.url; 
                     iconos.target = "_blank";
-                    iconos.innerHTML = `${element.network}`; 
 
+                    const elementSearch = element.network.toLowerCase()+".svg";     
+                    var search = svgIcons.find((valor)=> valor.toLowerCase() == elementSearch.toLowerCase()); 
+                    if (search){
+                        const dir = '/iconos/' + search;
+                        const img = `
+                            <img src=${dir} alt="icono de ${element.network}"></img>
+                        `;  
+                        console.log(img);
+                        iconos.innerHTML = img;  
+                    }else{
+                        iconos.innerHTML = `${element.network}`;
+                    }
                     footer.appendChild(iconos);
                 });
 
