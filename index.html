@@ -5,252 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Portfolio</title>
-    <style>
-        html{
-            font-family: Menlo, Monaco, Lucida Console, 'Courier New', Courier, monospace;
-            background: #fff;
-            letter-spacing: -0.025rem;
-        }
-        body,
-        figure{
-            margin: 0;
-            padding: 0;
-        }
-        a{
-            text-decoration: none;
-        }
-        ul{
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        *, *::before, *::after{
-            box-sizing: border-box;
-        }
-        /*
-        @media (prefers-color-scheme: dark){
-            html{
-                background: #000;
-                color: #fff;
-            }
-        }
-        */
-        h1, h2, h3, h4{
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        p{
-            color: #666;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin: 0;
-            text-wrap: pretty;
-        }
-        main{
-            padding: 4rem;
-            margin: auto;
-            width: 100%;
-        }
-        main section{
-            max-width: 700px; 
-            margin: 0 auto 48px;      
-        }
-        /* Estilando la cabecera del CV */
-        main .container{
-            display: flex; 
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem; 
-        }
-        main .container figure img{
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            width: 130px;
-            height: auto;
-            border-radius: 50%;
-        }
-        main section .container h1{
-           font-size: 2rem; 
-        }
-        main section .container h2{
-            color: #444;
-            font-weight: 500;
-            font-size: 1.1rem;
-            text-wrap: balance;
-        }
-        main section .info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            padding-right: 32px;
-        }
-        main section span{
-            color: #666;
-            font-size: 0.85rem;
-        }
-        main section .container footer{
-            display: flex;
-            gap: 10px; 
-            margin-top: 8px;
-        }
-        main section .container footer a{
-            text-decoration: none;
-            color: #777;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #eee;
-            padding: 4px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-        main section .container footer a:hover{
-            background: #eeee;
-            border: 1px solid #ddd;
-        }
-        /* Fin de la Cabecera */
-        /* Estilando Experience */
-        main section ul{
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
-        main section ul h3{
-            font-weight: 500;
-            color: #111;
-        }
-        main section ul h4{
-            color: #222;
-            font-weight: 400;
-        }
-        main section ul article header{
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 4px;
-        }
-        main section article header time{
-            color: #666;
-            font-size: 0.85rem;
-        }
-        /* Fin del estilado, section experience */
-        /* Estilando sección de educación */
-        main section article footer div{
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 4px;
-        }
-    </style>
-    <script>
-        /*function fetchJSONData() {
-            fetch("./schema.json")
-                .then((res) => {
-                    if (!res.ok) {
-                        throw new Error
-                            (`HTTP error! Status: ${res.status}`);
-                    }
-                    return res.json();
-                })
-                .then((data) => 
-                      console.log(data))
-                .catch((error) => 
-                       console.error("Unable to fetch data:", error));
-        }
-       fetchJSONData(); */
-       fetch('./schema.json')
-            .then(resp => resp.json())
-            .then((cv) => { 
-                const {name, label, location, email, image, profiles, summary} = cv.basics;
-                const {city, region } = location; 
-                const {network, url} = profiles; 
-                const {work} = cv;
-                const {education} = cv; 
-               
-                document.getElementById('name').textContent = name;
-                document.getElementById('label').textContent = label;
-                document.getElementById('location').textContent =  city + ', ' + region;
-                document.getElementById('email').textContent = "Outloook";
-                document.getElementById('email').href = `mailto:${email}`; 
-                document.getElementById('email').title = `Enviar un correo electronico ${name}`; 
-                document.getElementById('image').src = image; 
-                document.getElementById('image').alt = "Abatar";
-                document.getElementById('insert-about').textContent = summary;
-                
-                /* Mostramos los elementos en el footer de la información */
-                const footer = document.querySelector('footer'); 
-
-                profiles.forEach(element => {
-                    const iconos = document.createElement('a');
-                    iconos.href = element.url; 
-                    iconos.target = "_blank";
-                    iconos.innerHTML = `${element.network}`; 
-
-                    footer.appendChild(iconos);
-                });
-
-                /* Mostramos los elementos en la experiencia */
-                const listWork = document.querySelector('#list-work');
-             
-                work.forEach(element =>{
-                    const elemWork = document.createElement('li');
-                    const startYear = new Date(element.startDate).getFullYear();
-                    const endYear = element.endDate != null ? new Date(element.endDate).getFullYear() : "Actual";                  
-                    const years = `${startYear} - ${endYear}`;
-              
-                    const mostElemet = `
-                        <article>
-                            <header>
-                                <div>
-                                    <h3>${element.name}</h3>
-                                    <h4>${element.position}</h4>
-                                </div>    
-                                <time>${years}</time>
-                            </header>
-                            <footer>
-                                <p>${element.summary}</p>
-                                <p>${element.url}</p>
-                            </footer>                        
-                        </article>
-                    `; 
-                    elemWork.innerHTML = mostElemet;
-                    listWork.appendChild(elemWork);
-                })
-                
-                /* Mostramos los elementos en la Educación  */
-                const listEducation = document.querySelector('#list-education');
-             
-                education.forEach(element =>{
-                    const elemEducation = document.createElement('li');
-                    const startYear = new Date(element.startDate).getFullYear();
-                    const endYear = element.endDate != null ? new Date(element.endDate).getFullYear() : "Actual";           
-                    const years = `${startYear} - ${endYear}`;
-
-                    const mostElemet = `
-                        <article>
-                            <header>
-                                <div>
-                                    <h3>${element.institution}</h3>
-                                    <h4>${element.studyType}</h4>
-                                </div>    
-                                <time>${years}</time>
-                            </header>
-                            <footer>
-                                <p>${element.area}</p>
-                                <div>
-                                    <p>${element.courses}</p>
-                                    <p>${element.score}</p>
-                                </div>
-                            </footer>                        
-                        </article>
-                    `; 
-                    elemEducation.innerHTML = mostElemet;
-                    listEducation.appendChild(elemEducation);
-                })
-            }) 
-            .catch(err => console.error('Error fetching JSON:', err));          
-    </script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <main>
@@ -261,14 +17,13 @@
                     <h1 id="name"></h1>
                     <h2 id="label"></h2>
                     <span id="location"></span>
-                    <footer id="footer">                       
+                    <footer id="footer"> 
+                        <div class="print" id="print">
+                        </div>                      
                         <a  
                             id="email"
                             target="_blank"
                             rel="noopener noreferrer"> <!-- Habre el cliente del email -->
-                            <span class="material-symbols-outlined">
-                                mail
-                            </span>
                         </a>                    
                     </footer>
                 </div>
@@ -294,15 +49,19 @@
             <h1>Education</h1>
             <br>
             <ul id="list-education"></ul>
-        </section>
+        </section>   
         <!-- Projects -->
         <section id="Projects">
             <h1>Projects</h1>
+            <br>
+            <ul class="projects" id="list-projects"></ul>
         </section>
-        <!-- Skills -->
-        <section id="Skills">
+         <!-- Skills -->
+         <section id="Skills">
             <h1>Skills</h1>
-        </section>
+            <br>
+            <ul class="skills" id="list-skills"></ul>
+        </section>  
     </main>
 </body>
 </html>

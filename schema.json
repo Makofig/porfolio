@@ -4,7 +4,7 @@
       "label": "Programador Node.js, con 2 años de experiencia.",
       "image": "./img/abatar.jpg",
       "email": "Mark1089@outlook.com.ar",
-      "phone": "",
+      "phone": "3624-002525",
       "url": "",
       "summary": "Cuento con 2 años de experiencia como desarrollador Web. Actualmente estoy trabajando en proyectos personales. He trabajando en diferentes entornos: desde creación de una App-Web desde cero, para gestión de clientes hasta desarrollar politicas de redes en tegnologias Mikrotik.",
       "location": {
@@ -80,15 +80,42 @@
       "url": "https://publication.com",
       "summary": "Description…"
     }],
-    "skills": [{
+    "skills": [
+      {
       "name": "Web Development",
       "level": "Master",
       "keywords": [
         "HTML",
         "CSS",
         "JavaScript"
-      ]
-    }],
+      ]},
+      {
+        "name": "Backend",
+        "level": "Junior",
+        "keywords": [
+          "PHP",
+          "MariaDB"
+        ]
+      },
+      {
+        "name": "Mikrotik",
+        "lavel": "Junior",
+        "keywords": [
+          "OSPF",
+          "Load Balance",
+          "Trafict Cotrol"
+        ]
+      },
+      {
+        "name": "Fortigate",
+        "lavel": "Junior",
+        "keywords": [
+          "SD-WAN",
+          "Ipsec-VPN",
+          "Wireless"
+        ]
+      }
+  ],
     "languages": [{
       "language": "English",
       "fluency": "Native speaker"
@@ -109,8 +136,10 @@
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
       "description": "Description...",
+      "isActive": true, 
       "highlights": [
-        "Won award at AIHacks 2016"
+        "Won award at AIHacks 2016",
+        "otra cosa"
       ],
       "url": "https://project.com/"
     }]

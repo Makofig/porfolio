@@ -1,0 +1,222 @@
+html{
+    font-family: Menlo, Monaco, Lucida Console, 'Courier New', Courier, monospace;
+    background: #fff;
+    letter-spacing: -0.025rem;
+}
+body,
+figure{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+/*
+@media (prefers-color-scheme: dark){
+    html{
+        background: #000;
+        color: #fff;
+    }
+}
+*/
+h1, h2, h3, h4{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p{
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    text-wrap: pretty;
+}
+main{
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+}
+main section{
+    max-width: 700px; 
+    margin: 0 auto 48px;      
+}
+/* Estilando la cabecera del CV */
+main .container{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem; 
+}
+main .container figure img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 130px;
+    height: auto;
+    border-radius: 50%;
+}
+main section .container h1{
+   font-size: 2rem; 
+}
+main section .container h2{
+    color: #444;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-wrap: balance;
+}
+main section .info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-right: 32px;
+}
+main section span{
+    color: #666;
+    font-size: 0.85rem;
+}
+main section .container footer{
+    display: flex;
+    gap: 10px; 
+    margin-top: 8px;
+}
+main section .container footer div{
+    color: #555;
+    font-size: 0.75rem;
+}
+main section .container footer a{
+    text-decoration: none;
+    color: #777;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    padding: 4px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+main section .container footer a:hover{
+    background: #eeee;
+    border: 1px solid #ddd;
+}
+
+main section .container footer .print{
+    display: none;     
+}
+
+@media print{
+    main section .container footer .print{
+        display: block;  
+    }
+    main section .container footer a{
+        display: none;
+    }
+}
+/* Fin de la Cabecera */
+/* Estilando Experience */
+main section ul{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+main section ul h3{
+    font-weight: 500;
+    color: #111;
+}
+main section ul h4{
+    color: #222;
+    font-weight: 400;
+}
+main section ul article header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+}
+main section article header time{
+    color: #666;
+    font-size: 0.85rem;
+}
+/* Fin del estilado, section experience */
+/* Estilando sección de educación */
+main section article footer div{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+}
+/* Estilando las Skills */
+main section .skills{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+main section .skills li{
+    border-radius: 6px;
+    background: #eee;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.2rem 0.6rem; 
+    border: 1px solid #888;
+}
+/* Estilando la sección de los Proyectos */
+main section .projects{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, 
+        minmax(200px, 1fr)
+    );
+}
+main section .projects article{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 8px;
+    border: 1px solid #f2f2f2;
+    gap: 16px;
+    padding: 16px;
+}  
+main section .projects article header{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}  
+main section .projects article footer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 0.6rem;
+}
+main section .projects article footer span{
+    border-radius: 6px;
+    background: #eee;
+    color: #444;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+}
+main section .projects article h3{
+    margin-bottom: 4px;
+}
+main section .projects article p{
+    font-size: 0.75rem;
+    line-height: 1.2rem; 
+    margin-bottom: 4px;
+}
+main section .projects article a{
+    color: #111;
+}
+main section .projects article a:hover{
+    text-decoration: underline;
+}
+main section .projects article h3 span{
+    color: rgb(0, 188, 47); 
+}
