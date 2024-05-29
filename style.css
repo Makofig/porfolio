@@ -99,6 +99,7 @@ main section .container footer a{
     border: 1px solid #eee;
     padding: 4px;
     border-radius: 6px;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 main section .container footer a:hover{

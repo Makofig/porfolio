@@ -49,11 +49,27 @@ fetch('./schema.json')
                 
                 /* Mostramos los elementos en el footer de la información */
                 const footer = document.querySelector('footer'); 
-
+                /* coloca el icono del phone en la Header */
+                if (phone != null){
+                    const elementPhone = document.createElement('a'); 
+                    elementPhone.title = phone;
+                    
+                    let searchPhone = svgIcons.find((valor)=> valor.toLowerCase() == "phone.svg");
+                    if (searchPhone){
+                        const dir = '/iconos/' + searchPhone;
+                        const img = `
+                            <img src=${dir} alt="icono de ${searchPhone}"></img>
+                        `;  
+                        elementPhone.innerHTML = img;
+                    }
+                    footer.appendChild(elementPhone);
+                }
+                /* Busca y coloca el resto de los iconos de las redes en el Header */
                 profiles.forEach(element => {
                     const iconos = document.createElement('a');
                     iconos.href = element.url; 
                     iconos.target = "_blank";
+                    iconos.title = element.network;
 
                     const elementSearch = element.network.toLowerCase()+".svg";     
                     var search = svgIcons.find((valor)=> valor.toLowerCase() == elementSearch.toLowerCase()); 
@@ -62,7 +78,6 @@ fetch('./schema.json')
                         const img = `
                             <img src=${dir} alt="icono de ${element.network}"></img>
                         `;  
-                        console.log(img);
                         iconos.innerHTML = img;  
                     }else{
                         iconos.innerHTML = `${element.network}`;
@@ -76,7 +91,8 @@ fetch('./schema.json')
                 work.forEach(element =>{
                     const elemWork = document.createElement('li');
                     const startYear = new Date(element.startDate).getFullYear();
-                    const endYear = element.endDate != null ? new Date(element.endDate).getFullYear() : "Actual";                  
+                    const endYear = element.endDate != null ? new Date(element.endDate).getFullYear() : "Actual"; 
+                    console.log(element.endDate, endYear);                  
                     const years = `${startYear} - ${endYear}`;
               
                     const mostElemet = `
@@ -104,7 +120,8 @@ fetch('./schema.json')
                 education.forEach(element =>{
                     const elemEducation = document.createElement('li');
                     const startYear = new Date(element.startDate).getFullYear();
-                    const endYear = element.endDate != null ? new Date(element.endDate).getFullYear() : "Actual";           
+                    const endYear = element.endDate != null ? new Date(element.endDate).getFullYear() : "Actual";  
+                      
                     const years = `${startYear} - ${endYear}`;
 
                     const mostElemet = `

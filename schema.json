@@ -4,9 +4,9 @@
       "label": "Programador Node.js, con 2 años de experiencia.",
       "image": "./img/abatar.jpg",
       "email": "Mark1089@outlook.com.ar",
-      "phone": "3624-002525",
+      "phone": "+54 3624000000",
       "url": "",
-      "summary": "Cuento con 2 años de experiencia como desarrollador Web. Actualmente estoy trabajando en proyectos personales. He trabajando en diferentes entornos: desde creación de una App-Web desde cero, para gestión de clientes hasta desarrollar politicas de redes en tegnologias Mikrotik.",
+      "summary": "Profesional con experiencia como sys-admin, especializado en la administración eficiente de sistemas y redes, con enfoque en tecnologías Mikrotik. He trabajado en diferentes entornos: desde de la optimización de conectividad inalámbrica y gestión de redes, hasta la creación y funcionamiento de una aplicación Web para control de clientes. Cuento además, con habilidades en el desarrollo de aplicaciones Web, utilizando tecnologías como Flet(basado en Phyton) y PHP puro.", 
       "location": {
         "address": "2712 Broadway St",
         "postalCode": "3500",
@@ -27,17 +27,27 @@
         }
     ]
     },
-    "work": [{
-      "name": "Company",
-      "position": "President",
-      "url": "https://company.com",
-      "startDate": "2013-01-01",
-      "endDate": "2014-01-01",
-      "summary": "Description…",
+    "work": [
+      {
+      "name": "InterSys",
+      "position": "Técnico",
+      "url": "",
+      "startDate": "2020-01-01",
+      "endDate": null,
+      "summary":"Supervisé y ejecuté operaciones de mantenimiento especializado, garantizando la integridad y eficiencia de la infraestructura Wireless. Diseñé y aplique estrategias innovadoras para la optimización continua de la red, implementando mejoras basadas en mi experiencia en Routers Mikrorik.",
       "highlights": [
         "Started the company"
-      ]
-    }],
+      ]},
+      {
+        "name":"Zorzon Supermercados",
+        "position": "Técnico",
+        "url": "",
+        "startDate": "2022-01-01",
+        "endDate": "2024-03-20",
+        "summary": "Reparación y mantenimiento de sistemas informáticos, asegurando la continuidad operativa de los recursos tecnológicos. Configuración e implementación de sistemas de grabación digital, para la visualización de tickets en pantalla.",
+        "highlights": ["Started the company"]
+      }
+    ],
     "volunteer": [{
       "organization": "Organization",
       "position": "Volunteer",
@@ -50,15 +60,15 @@
       ]
     }],
     "education": [{
-      "institution": "University",
-      "url": "https://institution.com/",
-      "area": "Software Development",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "score": "4.0",
+      "institution": "Universidad Tecnológica Nacional",
+      "url": "https://www.frre.utn.edu.ar",
+      "area": "Ingeniería en sistemas de información",
+      "studyType": "Grado",
+      "startDate": "2012-01-01",
+      "endDate": "2024-08-01",
+      "score": "",
       "courses": [
-        "DB1101 - Basic SQL"
+        ""
       ]
     }],
     "awards": [{
@@ -82,19 +92,68 @@
     }],
     "skills": [
       {
-      "name": "Web Development",
+      "name": "HTML",
       "level": "Master",
       "keywords": [
-        "HTML",
-        "CSS",
-        "JavaScript"
+        "Desarrollo Web",
+        "Frontend"
       ]},
       {
-        "name": "Backend",
+        "name": "CSS",
         "level": "Junior",
         "keywords": [
-          "PHP",
-          "MariaDB"
+          "Desarrollo Web",
+          "Frontend",
+          "Diseño Responsive"
+        ]
+      },
+      {
+        "name": "JavaScript",
+        "lavel": "Junior",
+        "keywords": [
+          "Desarrollo Web",
+          "Frontend",
+          "Backend"
+        ]
+      },
+      {
+        "name": "MySql",
+        "lavel": "Junior",
+        "keywords": [
+          "Base de Datos",
+          "SQL",
+          "Almacenamiento de Datos"
+        ]
+      },
+      {
+        "name": "PHP",
+        "lavel": "Junior",
+        "keywords": [
+          "Backend"
+        ]
+      },
+      {
+        "name": "Node",
+        "lavel": "Junior",
+        "keywords": [
+          "Desarrollo Web",
+          "JavaScript",
+          "Backend",
+          "Servidor"
+        ]
+      },
+      {
+        "name": "Git",
+        "lavel": "Junior",
+        "keywords": [
+          "Control de Versiones"
+        ]
+      },
+      {
+        "name": "GitHub",
+        "lavel": "Junior",
+        "keywords": [
+          "Control de Versiones"
         ]
       },
       {
@@ -131,16 +190,35 @@
       "name": "Jane Doe",
       "reference": "Reference…"
     }],
-    "projects": [{
-      "name": "Project",
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "description": "Description...",
+    "projects": [
+      {
+      "name": "Soft-InterSys",
+      "startDate": "2023-08-01",
+      "endDate": "2024-02-20",
+      "description": "Sistema de gestión de clientes.",
       "isActive": true, 
       "highlights": [
-        "Won award at AIHacks 2016",
-        "otra cosa"
+        "PHP",
+        "HTML",
+        "CSS",
+        "MariaDB"
       ],
-      "url": "https://project.com/"
-    }]
+      "url": ""
+      },
+      {
+        "name": "Soft-LTDM",
+        "startDate": "2024-01-01",
+        "endDate": null, 
+        "description": "Sistema de gestion de productos para su venta.",
+        "isActive":  true, 
+        "highlights": [
+          "PHP",
+          "HTML",
+          "JavaScript",
+          "CSS",
+          "MariaDB"
+        ],
+        "url":""
+      }
+  ]
   }
