@@ -1,7 +1,7 @@
 {
     "basics": {
       "name": "Marcos Javier, Aquino",
-      "label": "Programador Node.js, con 2 años de experiencia.",
+      "label": "Programador con 2 años de experiencia.",
       "image": "./img/abatar.jpg",
       "email": "Mark1089@outlook.com.ar",
       "phone": "+54 3624000000",
@@ -209,7 +209,7 @@
         "name": "Soft-LTDM",
         "startDate": "2024-01-01",
         "endDate": null, 
-        "description": "Sistema de gestion de productos para su venta.",
+        "description": "Sistema de gestión de productos para su venta.",
         "isActive":  true, 
         "highlights": [
           "PHP",

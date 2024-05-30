@@ -1,4 +1,4 @@
-fetch('./schema.json')
+fetch('./assets/schema.json')
             .then(resp => resp.json())
             .then((cv) => { 
                 const svgIcons = [

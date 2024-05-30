@@ -188,6 +188,7 @@ main section .projects article{
 main section .projects article header{
     display: flex;
     flex-direction: column;
+    justify-content: normal;
     flex: 1;
 }  
 main section .projects article footer{
