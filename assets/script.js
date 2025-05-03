@@ -56,7 +56,7 @@ fetch('./assets/schema.json')
                     
                     let searchPhone = svgIcons.find((valor)=> valor.toLowerCase() == "phone.svg");
                     if (searchPhone){
-                        const dir = '/iconos/' + searchPhone;
+                        const dir = './iconos/' + searchPhone;
                         const img = `
                             <img src=${dir} alt="icono de ${searchPhone}"></img>
                         `;  
@@ -74,7 +74,7 @@ fetch('./assets/schema.json')
                     const elementSearch = element.network.toLowerCase()+".svg";     
                     var search = svgIcons.find((valor)=> valor.toLowerCase() == elementSearch.toLowerCase()); 
                     if (search){
-                        const dir = '/iconos/' + search;
+                        const dir = './iconos/' + search;
                         const img = `
                             <img src=${dir} alt="icono de ${element.network}"></img>
                         `;  
