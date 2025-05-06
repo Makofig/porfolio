@@ -29,7 +29,7 @@ Un portfolio minimalista basado en el proyecto del canal [Midudev](https://www.y
 
 1. Cloná este repositorio:
    ```bash
-   git clone https://github.com/Makofig/porfolio/porfolio.git
+   git clone https://github.com/Makofig/porfolio.git
     ```
 2. Modificá el archivo schema.json con tu información 
 
