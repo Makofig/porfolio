@@ -29,14 +29,14 @@ Un portfolio minimalista basado en el proyecto del canal [Midudev](https://www.y
 
 1. Cloná este repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/tu-repo.git
+   git clone https://github.com/Makofig/porfolio/porfolio.git
     ```
 2. Modificá el archivo schema.json con tu información 
 
-🧠 Inspiración
+## 🧠 Inspiración
 Este proyecto se basa en la idea de Midudev de crear un portfolio adaptable a cualquier persona sin necesidad de modificar el código fuente, ideal para practicar JavaScript y estructuración de datos con JSON.
 
-📬 Contacto
+## 📬 Contacto
 Si querés contactarme o ver más sobre mi trabajo:
 
 GitHub: @Makofig
